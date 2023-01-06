@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:middleware/middleware/auth_middleware.dart';
+import 'package:middleware/view/adminScreen.dart';
 import 'package:middleware/view/home.dart';
 import 'package:get/get.dart';
 import 'package:middleware/view/login.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
             page: () => LoginScreen(),
             middlewares: [AuthMiddleWare()]),
         GetPage(name: '/home', page: () => HomeScreen()),
+        GetPage(name: '/adminS', page: () => AdminScreen()),
       ],
     );
   }

@@ -4,21 +4,20 @@ import 'package:flutter/src/widgets/framework.dart';
 import 'package:get/get.dart';
 import 'package:middleware/main.dart';
 
-class HomeScreen extends StatelessWidget {
-  const HomeScreen({super.key});
+class AdminScreen extends StatelessWidget {
+  const AdminScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('HomePage')),
+      appBar: AppBar(title: Text('admin page')),
       body: TextButton(
         onPressed: () {
-          // print(sharepref?.getString('id'));
           sharepref?.clear();
-          Get.toNamed('/login');
+          Get.offNamed('/login');
         },
         child: Text(
-          'signOut',
+          'singOut',
           style: TextStyle(color: Colors.red),
         ),
       ),

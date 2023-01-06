@@ -10,16 +10,27 @@ class LoginScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: AppBar(title: Text('login')),
-        body: TextButton(
-          onPressed: () {
-            sharepref!.setString('id', 'waleed');
+          appBar: AppBar(title: Text('------')),
+          body: Column(
+            children: [
+              TextButton(
+                onPressed: () {
+                  sharepref!.setString('role', 'admin');
 
-            Get.offNamed('/home');
-          },
-          child: Text('Login'),
-        ),
-      ),
+                  Get.offNamed('/adminS');
+                },
+                child: Text('login as an admin'),
+              ),
+              TextButton(
+                onPressed: () {
+                  sharepref!.setString('role', 'user');
+
+                  Get.offNamed('/home');
+                },
+                child: Text('Login as a user'),
+              ),
+            ],
+          )),
     );
   }
 }
